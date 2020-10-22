@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<br><br>
+<center><h1> My Prediction: {{ disease }} </h1></center><br>
+<br>
+<center><h3> Your input is: {{ text }} </h3></center><br>
+<center><h3> Symptoms from your description (Uncheck any, and resubmit for a better prediction): 
+<form action="/your-disease-re" method="POST">
+    {% for symptom in final_symptoms %}
+    <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" checked="checked" value="{{ symptom }}" id="defaultCheck1" name="disease_checkbox">
+    <label class="form-check-label" for="defaultCheck1">
+        {{ symptom }}
+    </label>
+    </div>
+    {% endfor %}
+    <br><br>
+    <center>
+        
+        <button type="submit" class="btn btn-primary btn-lg">Re-Submit</button>
+        <a href="/"><button type="button" class="btn btn-secondary btn-lg">Home page</button></a>
+    </center>
+</form>
+</h3></center><br>
+
+
+{% endblock %}
