@@ -1,5 +1,5 @@
 <H1> Doctor assistant bot </H1>
-<H3> A disease prediction bot that provides assistance to doctors for better disease accuracy and prediction bot. Collab link : <H3>
+<H3> A disease prediction bot that provides assistance to doctors for better disease accuracy and prediction bot. Collab link : </H3>
   
 What it does
 Doc Assit Bot is a chatbot that listens to your symptoms and predicts the most probable infection or disease you might have that would assist the doctor give his final report of the patient he is diagnosing 
