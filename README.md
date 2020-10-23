@@ -15,10 +15,8 @@ Doc Assit Bot is a chatbot that listens to a patient's symptoms and predicts the
 <li>Dataset: https://www.kaggle.com/rabisingh/symptom-checker
   
 <b>How to run:</B>
-<li> Have a look at our Colab notebook. Everything is clearly shown there:https://colab.research.google.com/drive/1iy0yRoLSxwoYgDCXyvx9CzolZY9YzbWq?usp=sharing</li>
+<li> Have a look at our Colab notebook. Everything is clearly shown there:https://colab.research.google.com/drive/1iy0yRoLSxwoYgDCXyvx9CzolZY9YzbWq?usp=sharing</li><br>
 
-
-  
 <b>Objective:</b> 
 
 Ever increasing patient load and decreasing patient doctor interaction duration often results in misdiagnosis. Apart from wrong diagnosis, a constant learning AI based assistant can also help general practitioners and junior doctors to derive insights from latest clinical advancements, treatment protocols and medical literature in real time. 
