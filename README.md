@@ -9,8 +9,10 @@ Doc Assit Bot is a chatbot that listens to a patient's symptoms and predicts the
 
 <b>Framework:</B>
 <li>Backend: Python + Flask 
+
 <li>Frontend: Bootstrap (Barebones, for demo only)
 <li>Machine Learning Model : RandomForest and Naive Bayes from Sklearn for the disease prediction. The model has been pretrained on a dataset of 4920 trials with 132 symptoms and 41 diseases. NLTK was used for pre-processing of the input description.
+
 
 <li>Dataset: https://www.kaggle.com/rabisingh/symptom-checker
   
