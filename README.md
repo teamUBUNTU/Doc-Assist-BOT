@@ -10,7 +10,7 @@ Doc Assit Bot is a chatbot that listens to your symptoms and predicts the most p
 
 <li>Backend: Python + Flask 
 <li>Frontend: Html,css
-<li>Model : RandomForest from sklearn library for the disease prediction. The model has been pretrained on a dataset of 4920 trials with 132 symptoms and 41 diseases.NLP lbrabry was used for the pre processing for the user input 
+<li>Model : RandomForest from sklearn library for the disease prediction. The model has been pretrained on a dataset of 4920 trials with 132 symptoms and 41 diseases.NLP librabry was used for the pre processing for the user input 
 
 <li>Dataset: Add Kaggle link
   
