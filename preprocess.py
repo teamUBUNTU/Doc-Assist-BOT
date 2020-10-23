@@ -31,5 +31,5 @@ def symptoms(symptoms):
     return set(final_symptoms_flat)
 
 #print(symptoms(word_extractor(input("Describe your symptoms: "))))
-from predict import predictor
-print(predictor(symptoms(word_extractor(input("Describe your symptoms: ")))))
+#from predict import predictor
+#print(predictor(symptoms(word_extractor(input("Describe your symptoms: ")))))
