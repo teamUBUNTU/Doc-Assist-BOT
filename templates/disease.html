@@ -3,7 +3,14 @@
 {% block body %}
 
 <br><br>
-<center><h1> My Prediction: {{ disease }} </h1></center><br>
+<center><h1> My Predictions:</h1></center><br>
+<center><h2>
+    <ol>
+    {% for disease in diseases %} 
+        <li>{{ disease }}</li>
+    {% endfor %}
+    </ol>
+</h2></center><br>
 <br>
 <center><h3> Your input is: {{ text }} </h3></center><br>
 <center><h3> Symptoms from your description (Uncheck any, and resubmit for a better prediction): 
