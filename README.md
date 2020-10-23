@@ -1,4 +1,5 @@
 <H1> Doctor Assistant Bot </H1>
+![alt text](static/logo.jpg)
 <H3> A disease prediction bot that provides assistance to doctors for better and faster diagnostics.</H3>
 
 Augmenting clinical practice with data and AI. We try to empower the doctor with ever-growing medical literature, statistics in time bound situations. The system learns over time, post deployment. 
