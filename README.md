@@ -36,7 +36,7 @@ It's scalable as well, on one end the information repositories may keep increasi
 
 <b>INSTRUCTIONS TO RUN</B>
 <li>install virtual venu and pip with python3.6 using virtualenv -p /usr/bin/python3 venv
-<li> install https://public.ukp.informatik.tu-darmstadt.de/reimers/sentence-transformers/v0.2/roberta-base-nli-stsb-mean-tokens.zip and unzip the contents into a models folder and put it in the same path as app.py
+<li> install https://public.ukp.informatik.tu-darmstadt.de/reimers/sentence-transformers/v0.2/roberta-base-nli-stsb-mean-tokens.zip and unzip the contents into a 'model' folder and put it in the same path as app.py
 <li> download cardio.sav from here https://drive.google.com/file/d/1Yx59_Tt58QAg3JSU8572jA0Qnh7dmpse/view?usp=sharing and put it in the same path as app.py
 <li>source venv/bin/activate and install the following dependencies 
 <li> pip3 install flask
