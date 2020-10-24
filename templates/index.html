@@ -3,11 +3,36 @@
 
 {% block body %}
 
-<form action="/your-disease" method="POST">
-    <input class="form-control form-control-lg" type="text" placeholder="Describe your symptoms", name="symptoms_input"><br><br>
-    <center><button type="submit" class="btn btn-primary btn-lg">Submit</button></center>
-    
-</form>
+<div class="container">
+  <div class="row">
+      <div class="col-lg-4 mb-3">
+          <img class="card-img-top" src="https://images.unsplash.com/photo-1588623358844-fd118c056dfc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+          <div class="card-body">
+              <h5 class="card-title">Symptom checker</h5>
+              <p class="card-text">type the symptoms and it will update the disease</p>
+              <a href="{{ url_for('sym') }}" class="btn btn-outline-success btn-sm">Go there</a>
+          </div>
 
+      </div>
+      <div class="col-lg-4 mb-3">
+          <img class="card-img-top" src="https://images.unsplash.com/photo-1580756338357-a0ba1932d879?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+          <div class="card-body">
+              <h5 class="card-title">Cardio checker</h5>
+              <p class="card-text">Type the details to know the condition of your heart</p>
+              <a href="{{ url_for('cardio') }}" class="btn btn-outline-success btn-sm">Go there</a>
+          </div>
+      </div>
+      <div class="col-lg-4 mb-3">
+          <img class="card-img-top" src="https://images.unsplash.com/photo-1523312727315-7c6ae09c3d09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+          <div class="card-body">
+              <h5 class="card-title">Kidney checker</h5>
+              <p class="card-text">Type the details to know the condition of your kidney</p>
+              <a href="{{ url_for('kidney') }}" class="btn btn-outline-success btn-sm">Go there</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+</div>
 
 {% endblock %}

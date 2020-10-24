@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h1><CENTER>CHRONIC KIDNEY DISEASE PREDICITOR</CENTER></h1>
+
+<form action="/your-kidney" method="POST">
+    <input class="form-control form-control-lg" type="text" placeholder="enter your age", name="age"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your albumin level in the range of 0-very low ,1,2,3,4,5-very high", name="al"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="are u anemic 1:yes 0:no", name="ane"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="Do you have appetite 1:yes 0:no", name="appet"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="Do you have bacterial infection 1:yes 0:no", name="bact"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter you blood glucose level", name="bg"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter yout blood pressure", name="bp"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your blood urea level", name="bu"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="Do you have coronary artery disease 1:yes 0:no", name="cad"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="DO you have diabetes mellitus 1:yes 0:no ", name="dm"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your hemoglobin level", name="hemp"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="Do you have hypertension 1:yes 0:no", name="htn"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="Do you have pusscell 1:yes 0:no", name="pc"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="Do you have pusscell clamps 1:yes 0:no", name="pcc"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your packed cell volume", name="pcv"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="Do you have pedal edema 0 is good 1:yes 0:no", name="pe"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your body potassium level", name="pot"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="hows your rbc count 0:normal 1:abnormal ", name="rbc"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your rbc count", name="rc"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your serum creatinine count", name="sc"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter specifc gravity (1.005,1.010,1.015,1.020,1.025)", name="sg"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your sodium level", name="sod"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your sugar level 0-very low ,1,2,3,4,5-very high", name="su"><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your white blood count", name="wc"><br>
+    <center><button type="submit" class="btn btn-primary btn-lg">Submit</button></center>
+    
+</form>
+
+
+{% endblock %}

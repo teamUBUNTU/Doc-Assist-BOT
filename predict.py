@@ -18,7 +18,9 @@ le_name_mapping = dict(zip(label.classes_, label.transform(label.classes_)))
 
 model = joblib.load('model.pkl')
 
+model_cardio = joblib.load('cardio.sav')
 
+model_kidney = joblib.load('kidney.sav')
 def predictor(final_symptoms):
   y_test = np.zeros(132)
   for final_symptom in final_symptoms:
@@ -40,3 +42,29 @@ def predictor(final_symptoms):
         diseases.append(disease)
   
   return diseases
+
+def cardio_predict(features):
+  df = pd.read_csv('cardio_train.csv', delimiter=';')
+  df = df.drop('id',axis = 1)
+  X = df[df.columns.difference(['cardio'])]
+  y = df['cardio']
+  vocab = X.columns.tolist()[:]
+  y_test_in = pd.DataFrame(features, vocab)
+  X_eval = y_test_in.T
+  
+  y_eval = model_cardio.predict(X_eval)
+  return y_eval
+
+def kidney_predict(features):
+  df2 = pd.read_csv('kidney.csv')
+
+  X = df2[df2.columns.difference(['class'])]
+  y = df2['class']
+  X = X.drop('Unnamed: 0',axis = 1)
+  vocab = X.columns.tolist()[:]
+  print(vocab)
+  y_test_in = pd.DataFrame(features, vocab)
+  X_eval = y_test_in.T
+  
+  y_eval = model_kidney.predict(X_eval)
+  return y_eval
