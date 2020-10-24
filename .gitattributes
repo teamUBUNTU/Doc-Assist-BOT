@@ -1,2 +1,0 @@
-model.sav filter=lfs diff=lfs merge=lfs -text
-cardio.sav filter=lfs diff=lfs merge=lfs -text

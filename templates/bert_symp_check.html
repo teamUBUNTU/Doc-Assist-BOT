@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<form action="/your-bert-diease" method="POST">
+    <input class="form-control form-control-lg" type="text" placeholder="Describe your symptoms in a natural language", name="bert_symptoms_input"><br><br>
+    <center><button type="submit" class="btn btn-primary btn-lg">Submit</button></center>
+    
+</form>
+
+
+{% endblock %}

@@ -33,3 +33,15 @@ Often the vast experience itself of a clinician may result in bias while making 
 We do not address the patients, but doctors in order to help the expert and not encouraging self-medication. 
 It's scalable as well, on one end the information repositories may keep increasing which can be directly utilized by the system for dispensing the same information to the doctor as well. The Covid19 pandemic has made it realize that there is a lack of technology, which allows doctors to access the information from literature and statistics quickly enough to be integrated into daily practice.
 </p>
+
+<b>INSTRUCTIONS TO RUN</B>
+<li>install virtual venu and pip with python3.6 using virtualenv -p /usr/bin/python3 venv
+<li>source venv/bin/activate and install the following dependencies 
+<li> pip3 install flask
+<li> pip3 install nltk
+<li> pip3 install pandas
+<li> pip3 install sklearn
+<li> pip3 install sentence_transformers
+<li> pip3 install pyrebase
+<li> run python3 app.py 
+<li> to exit out of the virtual env type <i>deactivate</i>
