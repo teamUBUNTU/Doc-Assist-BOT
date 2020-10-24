@@ -21,11 +21,11 @@ labels = label.fit_transform(df_train['prognosis'])
 le_name_mapping = dict(zip(label.classes_, label.transform(label.classes_)))
 
 
-model = joblib.load('model.pkl')
+model = joblib.load('models/model.pkl')
 
 model_cardio = joblib.load('cardio.sav')
 
-model_kidney = joblib.load('kidney.sav')
+model_kidney = joblib.load('models/kidney.sav')
 def predictor(final_symptoms):
   y_test = np.zeros(132)
   for final_symptom in final_symptoms:
@@ -49,7 +49,7 @@ def predictor(final_symptoms):
   return diseases
 
 def cardio_predict(features):
-  df = pd.read_csv('cardio_train.csv', delimiter=';')
+  df = pd.read_csv('dataset/cardio_train.csv', delimiter=';')
   df = df.drop('id',axis = 1)
   X = df[df.columns.difference(['cardio'])]
   y = df['cardio']
@@ -61,7 +61,7 @@ def cardio_predict(features):
   return y_eval
 
 def kidney_predict(features):
-  df2 = pd.read_csv('kidney.csv')
+  df2 = pd.read_csv('dataset/kidney.csv')
 
   X = df2[df2.columns.difference(['class'])]
   y = df2['class']
@@ -91,9 +91,9 @@ def pre_processing(question):
 def bert_disease_predict(query):
   
   model_bert = SentenceTransformer('model')
-  with open('sentence_encoder_symp', 'rb') as f:
+  with open('models/sentence_encoder_symp', 'rb') as f:
     sentence_embeddings = pickle.load(f)
-  with open('symp.pkl', 'rb') as f:
+  with open('models/symp.pkl', 'rb') as f:
     symps = pickle.load(f)
   queries = pre_processing(query)
   query_embeddings = model_bert.encode([queries])

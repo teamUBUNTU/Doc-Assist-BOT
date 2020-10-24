@@ -168,7 +168,7 @@ def kidney_post():
 @app.route('/your-bert-diease', methods=['POST'])
 def bert_post():
     text = request.form.get('bert_symptoms_input')
-    df = pd.read_csv('dis_symp_prcoseessd.csv')
+    df = pd.read_csv('dataset/dis_symp_prcoseessd.csv')
     text = pre_processing(text)
     results = bert_disease_predict(text)
     number_top_matches = 10
