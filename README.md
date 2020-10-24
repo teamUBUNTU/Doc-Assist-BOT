@@ -33,3 +33,5 @@ Often the vast experience itself of a clinician may result in bias while making 
 We do not address the patients, but doctors in order to help the expert and not encouraging self-medication. 
 It's scalable as well, on one end the information repositories may keep increasing which can be directly utilized by the system for dispensing the same information to the doctor as well. The Covid19 pandemic has made it realize that there is a lack of technology, which allows doctors to access the information from literature and statistics quickly enough to be integrated into daily practice.
 </p>
+
+For contributions, suggestions or collabarations please mail to nikhilgarg.bits@gmail.com, akshayalpha1856@gmail.com, helloithihas@gmail.com
