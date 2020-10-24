@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<br><br>
+
+    {% if cardio ==  '1' %}
+    <center><h1> My Prediction: you might have a disease </h1></center><br>
+    {% else %}
+    <center><h1> My Prediction: you might not have a disease </h1></center><br>
+    {% endif %}
+
+<br>
+
+
+{% endblock %}

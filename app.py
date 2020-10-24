@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 from preprocess import word_extractor, symptoms
-from predict import predictor
+from predict import predictor,cardio_predict,kidney_predict
 import pyrebase
 
 config = {
@@ -22,6 +22,17 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('index.html')
+@app.route('/symp_check')
+def sym():
+    return render_template('symp_check.html')
+
+@app.route('/cardio_check')
+def cardio():
+    return render_template('cardio_check.html')
+
+@app.route('/kidney_check')
+def kidney():
+    return render_template('kidney_check.html')
 
 input_text = ''
 
@@ -53,6 +64,99 @@ def home_repost():
             
     return render_template('disease.html', text = input_text, final_symptoms = final_symptoms, diseases = diseases)
 
+@app.route('/your-cardio',methods = ['POST'])
+def cardio_post():
+    if request.method == 'POST':
+        features = []
+        phyAct = request.form.get('phyAct')
+        features.append(phyAct)
+        age = request.form.get('age')
+        features.append(age)
+        alc = request.form.get('alc')
+        features.append(alc)
+        sysBp = request.form.get('sysBp')
+        features.append(sysBp)
+        diaBp = request.form.get('diaBp')
+        features.append(diaBp)
+        chol = request.form.get('chol')
+        features.append(chol)
+        gender = request.form.get('gender')
+        features.append(gender)
+        gluc = request.form.get('gluc')
+        features.append(gluc)
+        height = request.form.get('height')
+        features.append(height)
+        smoke = request.form.get('smoke')
+        features.append(smoke)
+        weight = request.form.get('weight')
+        features.append(weight)
+        cardio = cardio_predict(features)
+        print(cardio)
+        if (cardio==[0]):
+            cardio = '0'
+        else:
+            cardio = '1'
+        return render_template('cardio.html', cardio = cardio)
+
+@app.route('/your-kidney',methods = ['POST'])
+def kidney_post():
+    if request.method == 'POST':
+        features = []
+        age = request.form.get('age')
+        features.append(age)
+        al = request.form.get('al')
+        features.append(al)
+        ane = request.form.get('ane')
+        features.append(ane)
+        appet = request.form.get('appet')
+        features.append(appet)
+        bact = request.form.get('bact')
+        features.append(bact)
+        bg = request.form.get('bg')
+        features.append(bg)
+        bp = request.form.get('bp')
+        features.append(bp)
+        bu = request.form.get('bu')
+        features.append(bu)
+        cad = request.form.get('cad')
+        features.append(cad)
+        dm = request.form.get('dm')
+        features.append(dm)
+        hemp = request.form.get('hemp')
+        features.append(hemp)
+        htn = request.form.get('htn')
+        features.append(htn)
+        pc = request.form.get('pc')
+        features.append(pc)
+        pcc = request.form.get('pcc')
+        features.append(pcc)
+        pcv = request.form.get('pcv')
+        features.append(pcv)
+        pe = request.form.get('pe')
+        features.append(pe)
+        pot = request.form.get('pot')
+        features.append(pot)
+        rbc = request.form.get('rbc')
+        features.append(rbc)
+        rc = request.form.get('rc')
+        features.append(rc)
+        sc = request.form.get('sc')
+        features.append(sc)
+        sg = request.form.get('sg')
+        features.append(sg)
+        sod = request.form.get('sod')
+        features.append(sod)
+        su = request.form.get('su')
+        features.append(su)
+        wc = request.form.get('wc')
+        features.append(wc)
+        print(len(features))
+        kid = kidney_predict(features)
+        if (kid==[0.]):
+            kid = '0'
+        else:
+            kid = '1'
+        return render_template('kideny.html', kid = kid)
 if __name__ == '__main__':
     app.run(debug=True)
     

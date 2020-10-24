@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h1><CENTER>CARDIO DISEASE PREDICITOR</CENTER></h1>
+
+<form action="/your-cardio" method="POST">
+    <input class="form-control form-control-lg" type="text" placeholder="do you have phyisical activity 1 - yes 0- no", name="phyAct"><br><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter age in days", name="age"><br><br>
+    <input class="form-control form-control-lg" type="text" placeholder="do u drink alchol , 0 for no and 1 for yes", name="alc"><br><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your Systolic blood pressure", name="sysBp"><br><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your Diastolic blood pressure", name="diaBp"><br><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter you cholestrol level : 1 for normal 2 : high 3: very high", name="chol"><br><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your gender (1 - women, 2 - men)", name="gender"><br><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your glucode level 1: normal, 2: high, 3: very high", name="gluc"><br><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your height", name="height"><br><br>
+    <input class="form-control form-control-lg" type="text" placeholder="DO you smoke 0 - no 1-yes ", name="smoke"><br><br>
+    <input class="form-control form-control-lg" type="text" placeholder="enter your weight", name="weight"><br><br>
+    <center><button type="submit" class="btn btn-primary btn-lg">Submit</button></center>
+    
+</form>
+
+
+{% endblock %}
