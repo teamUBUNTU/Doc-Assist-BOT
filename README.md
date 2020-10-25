@@ -47,3 +47,19 @@ It's scalable as well, on one end the information repositories may keep increasi
 <li> pip3 install pyrebase
 <li> run python3 app.py 
 <li> to exit out of the virtual env type <i>deactivate</i>
+  
+<b>Dataset to add</B>
+<li> https://www.ctsi.umn.edu/researcher-resources/clinical-data-repository
+<li> https://disease-info-api.herokuapp.com/diseases
+<li> https://github.com/devcenter-square/disease-info
+<li> http://disnet.ctb.upm.es/visualization/diseases-by-symptom?symptoms=Fever+%7C+
+<li> https://github.com/deshanadesai/Symptom-X-/blob/master/dataset_clean1.csv
+<li> https://www.kaggle.com/plarmuseau/sdsort?select=sym_3.csv
+<li> https://www.kaggle.com/sulianova/cardiovascular-disease-dataset
+<li> https://www.kaggle.com/pitt/contagious-diseases
+<li> https://www.kaggle.com/uciml/pima-indians-diabetes-database
+<li> https://www.kaggle.com/ruslankl/early-biomarkers-of-parkinsons-disease
+<li> https://www.kaggle.com/flaredown/flaredown-autoimmune-symptom-tracker
+<li> https://www.malacards.org/
+<li> https://github.com/topics/biological-expression-language
+<li> https://github.com/jgpavez/MedicalDiagnosis
