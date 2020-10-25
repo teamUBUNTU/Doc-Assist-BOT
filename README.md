@@ -34,4 +34,16 @@ We do not address the patients, but doctors in order to help the expert and not 
 It's scalable as well, on one end the information repositories may keep increasing which can be directly utilized by the system for dispensing the same information to the doctor as well. The Covid19 pandemic has made it realize that there is a lack of technology, which allows doctors to access the information from literature and statistics quickly enough to be integrated into daily practice.
 </p>
 
-For contributions, suggestions or collabarations please mail to nikhilgarg.bits@gmail.com, akshayalpha1856@gmail.com, helloithihas@gmail.com
+<b>INSTRUCTIONS TO RUN</B>
+<li>install virtual venu and pip with python3.6 using virtualenv -p /usr/bin/python3 venv
+<li> install https://public.ukp.informatik.tu-darmstadt.de/reimers/sentence-transformers/v0.2/roberta-base-nli-stsb-mean-tokens.zip and unzip the contents into a 'model' folder and put it in the same path as app.py
+<li> download cardio.sav from here https://drive.google.com/file/d/1Yx59_Tt58QAg3JSU8572jA0Qnh7dmpse/view?usp=sharing and put it in the same path as app.py
+<li>source venv/bin/activate and install the following dependencies 
+<li> pip3 install flask
+<li> pip3 install nltk
+<li> pip3 install pandas
+<li> pip3 install sklearn
+<li> pip3 install sentence_transformers
+<li> pip3 install pyrebase
+<li> run python3 app.py 
+<li> to exit out of the virtual env type <i>deactivate</i>
