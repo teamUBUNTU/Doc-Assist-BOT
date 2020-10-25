@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="results">
+	
+    {%for i in range(0,prediction|length)%} 
+    <h3>{{item[i]}}:<b>{{prediction[i]}}</b> [{{similarity[i]}}]<br></h3>
+    {{overview[i]}}
+    <br><br>
+    {%endfor%}
+    
+</div>
+
+
+{% endblock %}

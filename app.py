@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, url_for
 from preprocess import word_extractor, symptoms
-from predict import predictor,cardio_predict,kidney_predict
+from predict import predictor,cardio_predict,kidney_predict,pre_processing,bert_disease_predict
 import pyrebase
+import pandas as pd
+
 
 config = {
     "apiKey": "AIzaSyAtb_ClJ1maEUb20NZ3lNmPZJDMoX5M2mw",
@@ -33,6 +35,10 @@ def cardio():
 @app.route('/kidney_check')
 def kidney():
     return render_template('kidney_check.html')
+
+@app.route('/bert_disease_check')
+def bert():
+    return render_template('bert_symp_check.html')
 
 input_text = ''
 
@@ -157,6 +163,28 @@ def kidney_post():
         else:
             kid = '1'
         return render_template('kideny.html', kid = kid)
+
+
+@app.route('/your-bert-diease', methods=['POST'])
+def bert_post():
+    text = request.form.get('bert_symptoms_input')
+    df = pd.read_csv('dataset/dis_symp_prcoseessd.csv')
+    text = pre_processing(text)
+    results = bert_disease_predict(text)
+    number_top_matches = 10
+    diseases = []
+    item = []
+    i = 0
+    score = []
+    info = []
+    for idx, distance in results[0:number_top_matches]:
+        diseases.append(df['diseases'][idx])
+        score.append(1-distance)
+        i = i+1
+        item.append(i)
+        info.append(df['Overview'][idx])
+
+    return render_template('bert.html',prediction = diseases,item = item,similarity = score,summary = score,overview = info)
 if __name__ == '__main__':
     app.run(debug=True)
     
