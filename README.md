@@ -49,6 +49,10 @@ It's scalable as well, on one end the information repositories may keep increasi
 <li> to exit out of the virtual env type <i>deactivate</i>
   
 <b>Dataset to add</B>
+
+<li> http://disnet.ctb.upm.es/
+<li> https://data.euro.who.int/cisid/
+<li> https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/DDB/stats.html
 <li> https://www.ctsi.umn.edu/researcher-resources/clinical-data-repository
 <li> https://disease-info-api.herokuapp.com/diseases
 <li> https://github.com/devcenter-square/disease-info
