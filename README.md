@@ -4,6 +4,7 @@
 
 Augmenting clinical practice with data and AI. We try to empower the doctor with ever-growing medical literature, statistics in time bound situations. The system learns over time, post deployment. 
 
+
 <b>What it does</B>
 Doc Assit Bot is a chatbot that listens to a patient's symptoms and predicts the most probable infection or disease, hence assisting in diagnosing a patient.
 
