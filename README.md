@@ -20,6 +20,7 @@ Doc Assit Bot is a chatbot that listens to a patient's symptoms and predicts the
 
 <b>Objective:</b> 
 
+
 Ever increasing patient load and decreasing patient doctor interaction duration often results in misdiagnosis. Apart from wrong diagnosis, a constant learning AI based assistant can also help general practitioners and junior doctors to derive insights from latest clinical advancements, treatment protocols and medical literature in real time. 
 
 <b>The problem it solves:</b> 
